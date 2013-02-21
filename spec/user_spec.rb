@@ -1,10 +1,5 @@
 require 'spec_helper'
-
-class User < Struct.new(:notifier)
-  def suspend!
-    notifier.notify("suspended as")
-  end
-end
+require 'user'
 
 describe User, '#suspend!' do
   it 'sends a notification' do
